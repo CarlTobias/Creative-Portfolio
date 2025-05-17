@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Baskerville";
+  src: url("/fonts/LibreBaskerville-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont.ttf");
+}
+
+
+.homeHeader {
+  font-family: 'Baskerville';
+}

@@ -13,9 +13,10 @@ const NavBar = () => {
           </Box>
           <Flex
             flexDirection={"row"}
-            gap={5}
+            gap={10}
             justify={"center"}
             align={"center"}
+            pr={5}
           >
             <Box>
               <Link cursor={"pointer"} _hover={{ textDecoration: "none" }}>
