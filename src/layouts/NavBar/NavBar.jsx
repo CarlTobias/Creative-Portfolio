@@ -6,10 +6,24 @@ import { Outlet } from "react-router-dom";
 const NavBar = () => {
   return (
     <>
-      <Flex w={"100vw"} h={"100vh"} flexDirection={"column"}>
-        <Flex w={"100%"} p={3} justify={"space-between"} align={"center"}>
+      <Flex w={"100%"} h={"100vh"} flexDirection={"column"}>
+        <Flex
+          w={"100%"}
+          p={3}
+          justify={{base: "center", md: "space-between"}}
+          align={"center"}
+          // might remove these
+          position={"fixed"}
+          backgroundColor={"#FFF"}
+        >
           <Box>
-            <Image src={"/images/LogoCarl.png"} maxH={"32px"} />
+            <Link
+              href={"/home"}
+              cursor={"pointer"}
+              _hover={{ textDecoration: "none" }}
+            >
+              <Image src={"/images/LogoCarl.png"} maxH={"32px"} display={{base: "none", md: "block"}} />
+            </Link>
           </Box>
           <Flex
             flexDirection={"row"}
@@ -19,17 +33,31 @@ const NavBar = () => {
             pr={5}
           >
             <Box>
-              <Link cursor={"pointer"} _hover={{ textDecoration: "none" }}>
+              <Link
+                href={"/about"}
+                fontSize={20}
+                cursor={"pointer"}
+                _hover={{ textDecoration: "none" }}
+              >
                 About
               </Link>
             </Box>
             <Box>
-              <Link cursor={"pointer"} _hover={{ textDecoration: "none" }}>
+              <Link
+                href={"/portfolio"}
+                fontSize={20}
+                cursor={"pointer"}
+                _hover={{ textDecoration: "none" }}
+              >
                 Portfolio
               </Link>
             </Box>
             <Box>
-              <Link cursor={"pointer"} _hover={{ textDecoration: "none" }}>
+              <Link
+                fontSize={20}
+                cursor={"pointer"}
+                _hover={{ textDecoration: "none" }}
+              >
                 CV
               </Link>
             </Box>
