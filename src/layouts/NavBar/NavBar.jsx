@@ -10,7 +10,7 @@ const NavBar = () => {
         <Flex
           w={"100%"}
           p={3}
-          justify={{base: "center", md: "space-between"}}
+          justify={{ base: "center", md: "space-between" }}
           align={"center"}
           // might remove these
           position={"fixed"}
@@ -22,7 +22,11 @@ const NavBar = () => {
               cursor={"pointer"}
               _hover={{ textDecoration: "none" }}
             >
-              <Image src={"/images/LogoCarl.png"} maxH={"32px"} display={{base: "none", md: "block"}} />
+              <Image
+                src={"/images/LogoCarl.png"}
+                maxH={"32px"}
+                display={{ base: "none", md: "block" }}
+              />
             </Link>
           </Box>
           <Flex
@@ -64,7 +68,7 @@ const NavBar = () => {
           </Flex>
         </Flex>
 
-        <Box flex={1}>
+        <Box flex={2}>
           <Outlet />
         </Box>
       </Flex>
