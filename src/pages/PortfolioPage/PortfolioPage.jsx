@@ -14,7 +14,6 @@ const PortfolioPage = () => {
             p={3}
             justify={"left"}
             align={"center"}
-            backgroundColor={"#FFF"}
           >
             <Box>
               <Link

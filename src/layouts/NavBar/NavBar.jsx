@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Box, Flex, Image, Link } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 
@@ -12,9 +10,6 @@ const NavBar = () => {
           p={3}
           justify={{ base: "center", md: "space-between" }}
           align={"center"}
-          // might remove these
-          position={"fixed"}
-          backgroundColor={"#FFF"}
         >
           <Box>
             <Link
@@ -58,6 +53,9 @@ const NavBar = () => {
             </Box>
             <Box>
               <Link
+                href={"/downloadables/Carl Tobias - CV.pdf"}
+                download
+                isExternal
                 fontSize={20}
                 cursor={"pointer"}
                 _hover={{ textDecoration: "none" }}

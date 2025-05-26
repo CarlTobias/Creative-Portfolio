@@ -1,5 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
-
+import { Box, Flex, Image } from "@chakra-ui/react";
 const Woofles = () => {
   return (
     <>
@@ -80,8 +79,30 @@ const Woofles = () => {
           </Flex>
         </Flex>
 
-        <Flex flex={1} minH={"100%"} justify={"center"} align={"center"}>
-          Insert Image Carousel Here
+        <Flex flex={1} w={"100%"} justify={"center"} align={"center"}>
+          <Flex
+            direction={"row"}
+            w={"100%"}
+            h={"50vh"}
+            gap={5}
+            justify={"left"}
+            align={"center"}
+            wrap={"nowrap"}
+            overflowX={"auto"}
+            sx={{
+              "&::-webkit-scrollbar": {
+                display: "none",
+              },
+              "-ms-overflow-style": "none",
+              "scrollbar-width": "none",
+            }}
+          >
+            <Image src={"/images/woofles/wooflesLogin.png"} h={"100%"} />
+            <Image src={"/images/woofles/wooflesHome.png"} h={"100%"} />
+            <Image src={"/images/woofles/wooflesProfile.png"} h={"100%"} />
+            <Image src={"/images/woofles/wooflesEditProfile.png"} h={"100%"} />
+            <Image src={"/images/woofles/wooflesSettings.png"} h={"100%"} />
+          </Flex>
         </Flex>
       </Flex>
     </>
@@ -89,3 +110,30 @@ const Woofles = () => {
 };
 
 export default Woofles;
+
+{
+  /* <Flex
+  direction="row"
+  w="70vw"
+  overflowX="auto"
+  wrap="nowrap"
+  gap={4}
+  p={4}
+  border="1px solid #ccc"
+>
+  {Array.from({ length: 10 }).map((_, i) => (
+    <Box
+      key={i}
+      minW="200px"
+      height="100px"
+      bg="teal.100"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      flexShrink={0}
+    >
+      Item {i + 1}
+    </Box>
+  ))}
+</Flex>; */
+}
